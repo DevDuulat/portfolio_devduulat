@@ -56,6 +56,11 @@ const handleMobileClick = () => {
           </router-link>
           <span class="tooltip-text" :class="{ 'visible-tooltip': activeTooltip === 3 }">Навыки</span>
         </li>
+        <li class="tooltip-container" @mouseenter="showTooltip(4)" @mouseleave="hideTooltip()" @click="handleMobileClick">
+          <router-link to="/services" class="text-white opacity-80 hover:opacity-100 transition duration-150 p-2 block rounded-lg">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#ffffff" d="m14.6 16.6l4.6-4.6l-4.6-4.6L16 6l6 6l-6 6l-1.4-1.4m-5.2 0L4.8 12l4.6-4.6L8 6l-6 6l6 6l1.4-1.4Z"/></svg>   </router-link>
+          <span class="tooltip-text" :class="{ 'visible-tooltip': activeTooltip === 4 }">Услуги</span>
+        </li>
 
         <!--        <li class="tooltip-container" @mouseenter="showTooltip(4)" @mouseleave="hideTooltip()" @click="handleMobileClick">-->
         <!--          <router-link to="/blog" class="text-white opacity-80 hover:opacity-100 transition duration-150 p-2 block rounded-lg">-->
