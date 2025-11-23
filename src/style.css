@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@import "tailwindcss/utilities";
+
+body {
+    font-family: Inter, sans-serif;
+    @apply bg-[#151312];
+}
+.font-dev-style {
+    font-family: 'Space Mono', monospace;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    background-color: #374151;
+    color: #ffffff;
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 60;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity .3s, visibility .3s;
+    font-size: .875rem;
+}
+
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #374151 transparent transparent transparent;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (max-width: 639px) {
+    .tooltip-text {
+        display: none;
+    }
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-link.active {
+    opacity: 1;
+    border-bottom: 2px solid #f97316;
+}
